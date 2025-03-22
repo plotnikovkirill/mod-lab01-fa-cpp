@@ -45,7 +45,7 @@ unsigned int faStr2(const char* str) {
             capital_letter = false;
             right_word = true;
         } else {
-            if (in_word) {
+            if (!in_word) {
                 in_word = true;
                 capital_letter = isupper(*str);
             }

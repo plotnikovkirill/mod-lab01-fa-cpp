@@ -23,6 +23,10 @@ unsigned int faStr1(const char* str) {
         }
     }
 
+   if (in_word && !has_digit) {
+        ++cnt;
+   }
+
     return cnt;
 }
 
@@ -75,6 +79,11 @@ unsigned int faStr3(const char* str) {
             in_word = true;
             cur_length++;
         }
+    }
+   
+    if (in_word) {
+        total_length += cur_length;
+        word_cnt++;
     }
 
     if (word_cnt == 0) {
